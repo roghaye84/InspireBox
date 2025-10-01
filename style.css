@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d5bbdb;
+    font-family: sans-serif;
+}
+
+.InsiperBox {
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
+}
+
+.InsiperBox h2 {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 30px;
+}
+
+.InsiperBox blockquote {
+    font-size: clamp(18px, 4vw, 25px);
+    min-height: 100px;
+}
+
+.InsiperBox blockquote::before,
+.InsiperBox blockquote::after {
+    content: ' " ';
+}
+
+.InsiperBox span {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.InsiperBox span::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: rgb(122, 49, 135);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.InsiperBox button {
+    display: inline-block;
+    background-color: rgb(122, 49, 135);
+    color: white;
+    border-radius: 25px;
+    border: 1px solid rgb(122, 49, 135);
+    width: 140px;
+    max-width: 45%;
+    height: 40px;
+    margin: 15px 5px 0 5px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.InsiperBox button:hover {
+    background-color: #ac7cb5;
+}
+
+.author {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 600;
+}
+
+@media (max-width: 500px) {
+    .InsiperBox {
+        padding: 20px 15px;
+    }
+
+    .InsiperBox button {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0 0 0;
+    }
+}
